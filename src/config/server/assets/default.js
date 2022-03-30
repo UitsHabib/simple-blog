@@ -1,8 +1,16 @@
 module.exports = {
-    routes: [
-        "src/modules/**/*.routes.js",
-    ],
-    strategies: [
-        "src/modules/**/*.strategy.js"
-    ]
+    client: {
+        css: "wwwroot/bundles/app.css",
+        js: "wwwroot/bundles/app.js"
+    },
+    server: {
+        routes: [
+            "src/modules/**/*.routes.js",
+            "src/modules/!(core)/server/**/*.routes.js",
+            "src/modules/core/server/**/*.routes.js",
+        ],
+        strategies: [
+            "src/modules/**/*.strategy.js"
+        ]
+    }
 };

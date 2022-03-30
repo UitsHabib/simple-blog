@@ -52,11 +52,20 @@ async function initEnvironmentVariables() {
 }
 
 function getGlobalConfig() {
-    const assets = require(path.join(process.cwd(), "src/config/server/assets/default"));
+    let defaultAssets = require(path.join(process.cwd(), "src/config/server/assets/default"));
+    let environmentAssets = process.env.NODE_ENV === "production" ? require(path.join(process.cwd(), "src/config/server/assets/production")) : {};
+
+    let assets = _.merge(defaultAssets, environmentAssets);
 
     let config = {
-        routes: getGlobbedPaths(assets.routes),
-        strategies: getGlobbedPaths(assets.strategies)
+        client: {
+            js: getGlobbedPaths(assets.client.js, ["wwwroot/"]),
+            css: getGlobbedPaths(assets.client.css, ["wwwroot/"])
+        },
+        server: {
+            routes: getGlobbedPaths(assets.server.routes),
+            strategies: getGlobbedPaths(assets.server.strategies)
+        }
     };
 
     return config;
