@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import store from './store';
 
 const { getSignedInUserProfile } = userActions;
+import { Login } from '../../user';
 
 let refCount = 0;
 
