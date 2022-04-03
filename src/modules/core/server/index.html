@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GLPG CDP</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, target-densitydpi=device-dpi">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" /> -->
+    <link rel="shortcut icon" type="image/ico" href="/assets/favicon.svg" />
+    {{#each cssFiles}}
+    <link rel="stylesheet" href="/{{this}}">
+    {{/each}}
+</head>
+
+<body>
+    <div id=app></div>
+
+    <div id="loader">
+        <div class="loader">
+            <div class="cdp-bg-secondary d-flex align-items-center text-white py-2 px-3 rounded">
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                Loading...
+            </div>
+        </div>
+    </div>
+    {{#each jsFiles}}
+    <script type="text/javascript" src="/{{this}}"></script>
+    {{/each}}
+</body>
+
+</html>
