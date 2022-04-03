@@ -32,8 +32,8 @@ module.exports = async function () {
 
     const globalConfig = config.getGlobalConfig();
 
-    // app.locals.jsFiles = globalConfig.client.js;
-    // app.locals.cssFiles = globalConfig.client.css;
+    app.locals.jsFiles = globalConfig.client.js;
+    app.locals.cssFiles = globalConfig.client.css;
 
     globalConfig.server.routes.forEach(function (routePath) {
         require(path.resolve(routePath))(app);
