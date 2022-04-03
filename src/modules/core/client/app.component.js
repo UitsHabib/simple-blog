@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { ToastProvider } from 'react-toast-notifications';
 
-// import "bootstrap/scss/bootstrap";
-// import "@fortawesome/fontawesome-free/css/all.css";
-// import "./app.scss";
+import "bootstrap/scss/bootstrap";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "./app.scss";
 
 import NoMatch from "./NoMatch";
 import PublicRoute from "./PublicRoute";
