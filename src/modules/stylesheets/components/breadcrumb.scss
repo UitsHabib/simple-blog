@@ -1,0 +1,107 @@
+.breadcrumb {
+    padding: 0px;
+    background: $white-color;
+    box-shadow: 1px 2px 12px -5px rgba(130,130,138,0.5);
+
+    > ol {
+        list-style: none;
+    }
+
+    &-item {
+        padding: 10px $gutter-space;
+        display: flex;
+
+        &.active {
+            background: $secondary-color;
+            color: $white-color;
+            transform: skewX(-10deg);
+
+
+            span {
+                transform: skewX(10deg);
+                padding-left: $gutter-space;
+            }
+
+            &:before {
+                display: none !important;
+            }
+        }
+    }
+
+    a {
+        color: $primary-color;
+
+        &:hover {
+        }
+    }
+
+    &__dropdown {
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .dropdown-item {
+
+            &.active {
+                background-color: inherit !important;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__faq-icon {
+        font-size: 1.9rem;
+    }
+
+    @media (max-width: $screen-phone) {
+
+        &-item {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 0px;
+
+            &.active {
+                padding-right: $gutter-space;
+            }
+        }
+
+        .dropdown-item {
+            position: relative;
+
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 1px;
+                background: $primary-color;
+                height: $gutter-space;
+                top: 25px;
+                left: $font-small;
+                z-index: 1;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: 0px;
+
+    @media (max-width: $screen-phone) {
+        margin-left: $gutter-space;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: $gutter-space;
+    color: $primary-color;
+    content: "/";
+}
+

@@ -1,0 +1,125 @@
+.modal {
+    &-header {
+        background-color: $gray-FAFAFA;
+        border-bottom: 0px;
+        padding: 28px 30px;
+        align-items: center;
+    }
+
+
+    &-body {
+        word-break: break-word;
+
+        &__mh-500 {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        &__min-h-500 {
+            min-height: 500px;
+
+            .add-campaign-step {
+                min-height: 400px;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 34px !important;
+        font-weight: bold !important;
+        color: $primary-color;
+
+        &_small {
+            font-size: 24px !important;
+        }
+    }
+
+
+
+    label {
+        font-size: $font-small;
+        color: $color-353D45;
+
+        .optional {
+            font-weight: normal;
+        }
+    }
+
+    .btn-close {
+        background: none;
+        // border: none !important;
+        opacity: 1;
+        // padding: 0px;
+        // padding-right: $gutter-space;
+        // outline: none;
+
+        // background-color: transparent;
+        // margin: -1rem -1rem -1rem auto;
+        // float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        // line-height: 1;
+        color: #000;
+        // text-shadow: 0 1px 0 #fff;
+
+        &:before {
+            color: $primary-color;
+            content: "\47";
+            font-family: "cdp-icon" !important;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        span[aria-hidden="true"] {
+            display: none;
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+
+
+    @media (min-width: $screen-phone) {
+        &-okla-width,
+        &-xxl {
+            width: 90%;
+            max-width: 90%;
+        }
+    }
+
+    @media (max-width: $screen-phone) {
+        &-header {
+            padding: 12px $gutter-space;
+        }
+
+        &-title {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+
+            &_small {
+                font-size: $font-large !important;
+            }
+        }
+    }
+
+    @media (min-width: $screen-desktop){
+        &-content {
+            max-height: 85vh;
+        }
+    }
+
+}
+
+@media (min-width: $screen-desktop){
+    .modal-content > div:nth-child(2){
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}

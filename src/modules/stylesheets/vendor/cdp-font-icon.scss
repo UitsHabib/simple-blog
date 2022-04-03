@@ -1,0 +1,644 @@
+@charset "UTF-8";
+
+$font-path: "../../../../wwwroot/assets/fonts";
+
+@font-face {
+    font-family: "cdp-icon";
+    src: url(#{$font-path}/cdp-icon.eot);
+    src: url(#{$font-path}/cdp-icon.eot?#iefix) format("embedded-opentype"),
+        url(#{$font-path}/cdp-icon.woff) format("woff"),
+        url(#{$font-path}/cdp-icon.ttf) format("truetype"),
+        url(#{$font-path}/cdp-icon.svg#cdp-icon) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: "cdp-icon" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "cdp-icon" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-help:before {
+    content: "\61";
+}
+
+.icon-information-management:before {
+    content: "\62";
+}
+
+.icon-user-management:before {
+    content: "\63";
+}
+
+.icon-tag-persona-management:before {
+    content: "\64";
+}
+
+.icon-sample-request-management:before {
+    content: "\65";
+}
+
+.icon-marketing-promotion-management:before {
+    content: "\66";
+}
+
+.icon-arrow-down:before {
+    content: "\67";
+}
+
+.icon-arrow-up:before {
+    content: "\68";
+}
+
+.icon-logout:before {
+    content: "\69";
+}
+
+.icon-user-round:before {
+    content: "\6a";
+}
+
+.icon-add-user:before {
+    content: "\6b";
+}
+
+.icon-board-games-with-roles:before {
+    content: "\6c";
+}
+
+.icon-calendar:before {
+    content: "\6d";
+}
+
+.icon-handshake:before {
+    content: "\6e";
+}
+
+.icon-listing:before {
+    content: "\6f";
+}
+
+.icon-network:before {
+    content: "\70";
+}
+
+.icon-secure:before {
+    content: "\71";
+}
+
+.icon-switch:before {
+    content: "\72";
+}
+
+.icon-consent-management:before {
+    content: "\73";
+}
+
+.icon-customer-data-platform:before {
+    content: "\74";
+}
+
+.icon-gear:before {
+    content: "\75";
+}
+
+.icon-infield-team:before {
+    content: "\76";
+}
+
+.icon-laptop:before {
+    content: "\77";
+}
+
+.icon-key:before {
+    content: "\78";
+}
+
+.icon-user-heart:before {
+    content: "\79";
+}
+
+.icon-search-globally:before {
+    content: "\7a";
+}
+
+.icon-role:before {
+    content: "\41";
+}
+
+.icon-place:before {
+    content: "\42";
+}
+
+.icon-marketing-promotion:before {
+    content: "\43";
+}
+
+.icon-market-research:before {
+    content: "\44";
+}
+
+.icon-user-setting:before {
+    content: "\45";
+}
+
+.icon-users:before {
+    content: "\46";
+}
+
+.icon-close-round:before {
+    content: "\47";
+}
+
+.icon-edit-pencil:before {
+    content: "\48";
+}
+
+.icon-filter:before {
+    content: "\49";
+}
+
+.icon-plus:before {
+    content: "\4a";
+}
+
+.icon-team:before {
+    content: "\4b";
+}
+
+.icon-user:before {
+    content: "\4c";
+}
+
+.icon-serach:before {
+    content: "\4d";
+}
+
+.icon-sorting:before {
+    content: "\4e";
+}
+
+.icon-applications:before {
+    content: "\4f";
+}
+
+.icon-europe-map:before {
+    content: "\50";
+}
+
+.icon-sort:before {
+    content: "\51";
+}
+
+.icon-check-filled:before {
+    content: "\52";
+}
+
+.icon-close-circle:before {
+    content: "\53";
+}
+
+.icon-check-square:before {
+    content: "\54";
+}
+
+.icon-calendar-check:before {
+    content: "\55";
+}
+
+.icon-accept:before {
+    content: "\56";
+}
+
+.icon-balance:before {
+    content: "\57";
+}
+
+.icon-data-consent-management:before {
+    content: "\58";
+}
+
+.icon-letter-in:before {
+    content: "\59";
+}
+
+.icon-manage-profile:before {
+    content: "\5a";
+}
+
+.icon-global:before {
+    content: "\30";
+}
+
+.icon-clock:before {
+    content: "\31";
+}
+
+.icon-history:before {
+    content: "\32";
+}
+
+.icon-setting:before {
+    content: "\33";
+}
+
+.icon-defile-roles:before {
+    content: "\34";
+}
+
+.icon-partner:before {
+    content: "\35";
+}
+
+.icon-supplier:before {
+    content: "\36";
+}
+
+.icon-list-edit:before {
+    content: "\37";
+}
+
+.icon-minimize:before {
+    content: "\38";
+}
+
+.icon-expand:before {
+    content: "\39";
+}
+
+.icon-bpm:before {
+    content: "\21";
+}
+
+.icon-ct-management:before {
+    content: "\22";
+}
+
+.icon-managae-general-disclaimer:before {
+    content: "\23";
+}
+
+.icon-manage-catalouge:before {
+    content: "\24";
+}
+
+.icon-manage-content:before {
+    content: "\25";
+}
+
+.icon-manage-criteria:before {
+    content: "\26";
+}
+
+.icon-manage-gps:before {
+    content: "\27";
+}
+
+.icon-manage-mapping:before {
+    content: "\28";
+}
+
+.icon-manage-patient-application:before {
+    content: "\29";
+}
+
+.icon-manage-scheduler:before {
+    content: "\2a";
+}
+
+.icon-manage-study-design:before {
+    content: "\2b";
+}
+
+.icon-version-control:before {
+    content: "\2c";
+}
+
+//custome css
+$class-slug: icon- !default;
+
+@for $i from 10 through 40 {
+    .#{$class-slug}#{$i}#{px} {
+        font-size: 0px + $i;
+    }
+}
+
+@for $i from 1 through 10 {
+    .#{$class-slug}#{$i}#{x} {
+        font-size: 0em + $i;
+    }
+}
+
+.icon.icon-bold::before {
+    font-weight: bold !important;
+}
+
+.icon.icon-italic::before {
+    font-style: italic !important;
+}
+
+.icon.icon-plus,
+.icon-setting,
+.icon-position-bit-down {
+    position: relative;
+    top: 2px;
+}
+
+/*Ico Moon icons*/
+@font-face {
+    font-family: "cdp-icomoon";
+    src: url("#{$font-path}/cdp-icomoon.eot?xpz7ft");
+    src: url("#{$font-path}/cdp-icomoon.eot?xpz7ft#iefix")
+            format("embedded-opentype"),
+        url("#{$font-path}/cdp-icomoon.ttf?xpz7ft") format("truetype"),
+        url("#{$font-path}/cdp-icomoon.woff?xpz7ft") format("woff"),
+        url("#{$font-path}/cdp-icomoon.svg?xpz7ft#cdp-icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "cdp-icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-bpm-hco:before {
+    content: "\e900";
+}
+
+.ico-bpm-hcp:before {
+    content: "\e901";
+}
+
+.ico-manage-vendor:before {
+    content: "\e902";
+}
+
+.ico-manage-healthcare:before {
+    content: "\e903";
+}
+
+.ico-deselect .path1:before {
+    content: "\e904";
+    color: rgb(22, 78, 68);
+}
+
+.ico-deselect .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(246, 147, 36);
+}
+
+.ico-select-all .path1:before {
+    content: "\e906";
+    color: rgb(20, 77, 67);
+}
+
+.ico-select-all .path2:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(246, 146, 35);
+}
+
+.ico-select-all .path3:before {
+    content: "\e908";
+    margin-left: -1em;
+    color: rgb(246, 146, 35);
+}
+
+.ico-contact-list:before {
+    content: "\e909";
+    color: #144d43;
+}
+
+.ico-mass-mailing:before {
+    content: "\e90a";
+    color: #144d43;
+}
+
+.ico-reporting:before {
+    content: "\e90b";
+    color: #144d43;
+}
+
+.ico-segment:before {
+    content: "\e90c";
+}
+
+.ico-attach:before {
+    content: "\e90d";
+}
+
+.ico-manage-tags:before {
+    content: "\e910";
+    color: #144d43;
+}
+
+.ico-eventpage:before {
+    content: "\e90e";
+    color: #144d43;
+}
+
+.ico-workplace:before {
+    content: "\e913";
+}
+
+.ico-doctor-contract:before {
+    content: "\e914";
+}
+
+.ico-marketing-req:before {
+    content: "\e912";
+    color: #144d43;
+}
+
+.ico-webinar:before {
+    content: "\e90d";
+    color: #144d43;
+}
+
+.ico-email-announcement:before {
+    content: "\e90f";
+    color: #144d43;
+}
+
+.ico-audit:before {
+    content: "\e915";
+    color: #144d43;
+}
+
+.ico-broadcast-email:before {
+    content: "\e916";
+    color: #144d43;
+}
+
+.ico-ift-member:before {
+    content: "\e917";
+    color: #144d43;
+}
+
+.ico-veeva-crm:before {
+    content: "\e918";
+    color: #144d43;
+}
+
+.ico-virtual-engagement:before {
+    content: "\e919";
+    color: #144d43;
+}
+
+.ico-website:before {
+    content: "\e91a";
+    color: #144d43;
+}
+
+.ico-cardiology:before {
+    content: "\e91b";
+    color: #116e5e;
+}
+
+.ico-gastrology:before {
+    content: "\e91c";
+    color: #116e5e;
+}
+
+.ico-rheumatology:before {
+    content: "\e91d";
+    color: #116e5e;
+}
+
+.ico-business:before {
+    content: "\e91e";
+    color: #144d43;
+}
+
+.ico-filtered-list:before {
+    content: "\e91f";
+    color: #144d43;
+}
+
+.ico-filter-option:before {
+    content: "\e920";
+    color: #144d43;
+}
+
+.ico-gear-setting:before {
+    content: "\e921";
+    color: #144d43;
+}
+
+.ico-locattion:before {
+    content: "\e922";
+    color: #144d43;
+}
+
+.ico-mail-pass:before {
+    content: "\e923";
+    color: #144d43;
+}
+
+.ico-paths:before {
+    content: "\e924";
+    color: #144d43;
+}
+
+.ico-point-board:before {
+    content: "\e925";
+    color: #144d43;
+}
+
+.ico-ringing:before {
+    content: "\e926";
+    color: #144d43;
+}
+
+.ico-search-list:before {
+    content: "\e927";
+    color: #144d43;
+}
+
+.ico-Shape:before {
+    content: "\e928";
+    color: #144d43;
+}
+
+.ico-showup:before {
+    content: "\e929";
+    color: #144d43;
+}
+
+.ico-web-click:before {
+    content: "\e92a";
+    color: #144d43;
+}
+
+.ico-classificaiton:before {
+    content: "\e92c";
+}
+
+.ico-import:before {
+    content: "\e92d";
+}
+
+.ico-performance-report:before {
+    content: "\e92e";
+}
+
+.ico-persona:before {
+    content: "\e92b";
+}
+
+//custome css
+$class-ico: ico- !default;
+
+@for $i from 10 through 40 {
+    .#{$class-ico}#{$i}#{px} {
+        font-size: 0px + $i;
+    }
+}
+
+@for $i from 1 through 10 {
+    .#{$class-ico}#{$i}#{x} {
+        font-size: 0em + $i;
+    }
+}
+
+.ico-bold::before {
+    font-weight: bold !important;
+}
+
+.ico-italic::before {
+    font-style: italic !important;
+}

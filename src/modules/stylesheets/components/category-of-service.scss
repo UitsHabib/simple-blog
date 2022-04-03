@@ -1,0 +1,119 @@
+.service {
+    &__header {
+        color: $primary-color;
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__link {
+        background: $white-color;
+        color: $primary-color;
+        font-weight: 600;
+        text-align: center;
+        height: 100%;
+        border-radius: $border-radius;
+        width: 215px;
+
+        &.disabled {
+            box-shadow: none !important;
+            color: $primary-color-lighter !important;
+            background: $disabaled-bg !important;
+            cursor: default;
+            // @include HEX-to-RGBA(background-color, $white-color, .5);
+        }
+
+        &:hover {
+            background: $secondary-color;
+            color: $white-color;
+            box-shadow: 0 11px 23px -9px $secondary-color-light;
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        font-size: 62px;
+    }
+
+    &__list {
+    }
+
+    &__search {
+        .wrapper {
+            border: 1px solid $primary-color !important;
+            background: $gray-F8F8F8 !important;
+        }
+
+        .search-icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+    }
+
+    &__recently-visited {
+        background: $gray-FAFAFA;
+
+        &-item {
+        }
+
+        &-icon {
+            color: $secondary-color;
+
+            &::before {
+                color: $secondary-color;
+            }
+
+            min-width: 21.462px;
+        }
+
+        &-link {
+            font-size: $font-small;
+            text-decoration: underline;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &-links {
+            font-size: $font-small;
+        }
+    }
+
+    @media (max-width: $screen-tablet) {
+
+        &__link {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        &__icon {
+            font-size: 48px;
+        }
+    }
+
+    @media (max-width: $screen-phone) {
+        &__item {
+            width: 100%;
+        }
+
+        &__link {
+            width: 100%;
+            font-size: $font-large;
+            font-weight: 600;
+            text-align: left;
+            padding-top: $gutter-space;
+            padding-bottom: 12px;
+        }
+
+        &__icon {
+            font-size: 48px;
+            flex: 0 0 20%;
+        }
+    }
+}

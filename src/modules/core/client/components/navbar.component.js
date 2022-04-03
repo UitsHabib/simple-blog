@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useCookies } from 'react-cookie';
 import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 

@@ -1,0 +1,33 @@
+#app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.fa-xs {
+    font-size: .65em;
+}
+
+.app__content {
+    flex: 1;
+    display: flex;
+    position: relative;
+
+    &-panel {
+        &-right {
+            position: inherit;
+
+            &.services-right-panel {
+                .faq-expand {
+                    top: 60px;
+                    height: calc(100% - 76px) !important;
+                }
+            }
+        }
+    }
+}

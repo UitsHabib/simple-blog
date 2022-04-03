@@ -1,0 +1,42 @@
+.profile-detail {
+
+    &__name {
+        color: $gray-212529;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    &__row {
+    }
+
+    &__col {
+        width: 50%;
+
+        &-fluid {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        color: $gray-2D3032;
+        font-size: $font-large;
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+
+    &__value {
+        color: $color-636A70;
+        font-size: $font-regular;
+        word-break: break-word;
+    }
+
+    @media (max-width: $screen-phone) {
+
+        &__col {
+            width: 100%;
+        }
+
+        &__row {
+        }
+    }
+}

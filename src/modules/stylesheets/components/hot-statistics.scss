@@ -1,0 +1,197 @@
+.hot-statistics {
+    &__box {
+
+        &-link {
+            transition: all .3s;
+
+            &:hover {
+                background: $white-color;
+                border-radius: 15px;
+                box-shadow: 0 9px 13px -9px #999;
+                transition: all .3s;
+            }
+        }
+
+        &-wrap {
+            background-color: $gray-F8F8F8;
+        }
+
+        @media (max-width: $screen-phone) {
+            border: 0px !important;
+        }
+    }
+
+    &__badge {
+        background-color: $white-d9d9d9;
+        padding: 4px 4px 5px 4px;
+        position: relative;
+
+        &-selection {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+
+            .selected {
+                display: none;
+
+                &-not {
+                    display: block;
+                    color: $gray-ddd;
+                }
+            }
+        }
+
+        &-selected {
+            background-color: $primary-color;
+            position: relative;
+
+            .hot-statistics__badge-icon:before {
+                color: $white-color;
+            }
+
+            .hot-statistics__badge-selection {
+                .selected {
+                    display: block;
+
+                    &-not {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__icon {
+        color: $primary-color;
+        font-size: 42px;
+        height: 52px;
+        display: block;
+
+        &-seclection {
+            background: url(../../../../wwwroot/assets/images/select-all.png) no-repeat -19px 0px;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            display: block;
+
+            &.deselect {
+                background-position: 0px 0px;
+            }
+        }
+    }
+
+    &__amount {
+        font-size: 34px;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+
+    &__title {
+        font-size: $font-small;
+        font-weight: 600;
+        color: $primary-color;
+    }
+
+    .disable {
+        cursor: not-allowed !important;
+    }
+
+    .multiselect__control {
+        /* box-shadow: 0 0 0 0.2rem rgb(20 77 67 / 25%) !important;*/
+
+        &:focus,
+        &:hover,
+        &:active {
+            box-shadow: 0 0 0 0.2rem rgb(20 77 67 / 25%) !important;
+        }
+    }
+
+    &__tab {
+        [role="tabpanel"] {
+            background: none;
+        }
+
+        .sc-bdvvaa {
+            margin: 0px -3px;
+            padding: 0px 8px;
+
+            svg {
+                display: none;
+            }
+
+            & > div > div,
+            & > div > div + div {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                display: flex;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                border: none;
+                background: transparent;
+                align-items: center;
+                justify-content: center;
+                color: $primary-color-lighter;
+                font-size: $font-small;
+
+                &:before {
+                    content: "";
+                }
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            & > div > div + div {
+                &:before {
+                    transform: rotate(180deg)
+                }
+            }
+        }
+
+        ul[role="tablist"] {
+            li[role="tab"] {
+                white-space: nowrap;
+                color: $primary-color !important;
+                font-size: 14px;
+                font-weight: bold;
+                padding: $gutter-space 3px 10px 3px;
+                margin: 0px 7px;
+                border-radius: 0px;
+                border: none;
+
+                &:hover {
+                    border-bottom: 5px solid $secondary-color-lighter;
+                }
+
+                &.disabled {
+                    color: $primary-color-lighter !important;
+                }
+
+                &[aria-selected="true"] {
+                    background-color: inherit;
+                    border-bottom: 5px solid $secondary-color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-phone) {
+        &__icon {
+            font-size: 32px;
+            height: 36px;
+        }
+
+        &__amount {
+            font-size: 32px;
+        }
+
+        &__title {
+            font-size: $font-small;
+        }
+    }
+}

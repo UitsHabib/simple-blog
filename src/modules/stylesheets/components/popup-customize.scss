@@ -1,0 +1,75 @@
+.popover {
+
+
+    &.popup-customize {
+        border-color: $secondary-color;
+        box-shadow: 0 9px 13px -7px $white-C5C5C5;
+        max-width: 600px;
+        @media (max-width: $screen-tablet) {
+            max-width: 95%;
+            // height: calc(100% - 57%);
+            // overflow-y: auto;
+        }
+
+
+        ul {
+        }
+
+        li {
+            color: $color-585F65;
+            padding-bottom: 5px;
+            font-size: $font-small;
+            position: relative;
+            padding-left: 20px;
+
+            .fa-circle {
+                color: $primary-color;
+                font-size: 10px;
+                position: absolute;
+                top: 5px;
+                margin-right: 8px;
+                left: 0px;
+            }
+        }
+    }
+
+    &-header {
+        background: $white-color;
+        border-bottom: none;
+        color: $primary-color;
+        font-size: $font-small;
+        line-height: $font-large;
+        font-weight: 600;
+    }
+}
+.popup-customize__content {
+
+    &-scroll {
+        max-height: 250px;
+        overflow: auto;
+    }
+
+    a {
+        color: $secondary-color !important;
+    }
+
+    @media (max-width: $screen-phone) {
+        max-height: 29vh;
+        overflow-y: auto;
+    }
+}
+
+.bs-popover-end > .popover-arrow{
+    left: calc(-0.5rem - 0px);
+}
+.bs-popover-top > .popover-arrow{
+    bottom: calc(-0.5rem - 0px);
+}
+
+.bs-popover-start > .popover-arrow{
+    right: calc(-0.5rem - 0px);
+}
+.bs-popover-bottom > .popover-arrow{
+    top: calc(-0.5rem - 0px);
+}
+

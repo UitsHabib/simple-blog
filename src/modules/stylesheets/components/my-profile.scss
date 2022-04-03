@@ -1,0 +1,57 @@
+.my-profile {
+    &__btn {
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+        text-overflow: ellipsis;
+        // display: flex;
+
+        &-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        span{
+            vertical-align: text-bottom;
+        }
+    }
+
+    &__sidebar {
+        position: sticky;
+        top: $gutter-space;
+    }
+
+    &__menu {
+        color: $gray-333 !important;
+        a {
+            color: $gray-333;
+            font-size: $font-regular;
+            border-left: 2px solid $white-color;
+
+            &:hover {
+                color: inherit !important;
+                background: $white-F6F8FA;
+            }
+            &:focus {
+                color: inherit !important;
+            }
+        }
+
+        &.selected {
+            a {
+                border-left: 2px solid $secondary-color;
+            }
+        }
+    }
+
+    .switch-label {
+        font-weight: normal;
+    }
+
+    @media (max-width: $screen-phone) {
+        &__sidebar {
+            position: relative;
+            top: 0px;
+        }
+    }
+}

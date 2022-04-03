@@ -1,0 +1,92 @@
+.DraftEditor-root,
+.DraftEditor-editorContainer,
+.public-DraftEditor-content {
+  /* padding: 5px;
+  margin: 5px; */
+}
+
+.public-DraftEditorPlaceholder-root {
+  /* margin-top: 28px;
+  margin-left: 25px; */
+}
+
+.public-DraftEditorPlaceholder-inner {
+  /* background: rgba(0, 0, 0, .5);
+  color: white; */
+}
+
+.DraftEditor-root {
+  /* min-height: 100px !important; */
+}
+
+.public-DraftEditor-content {
+   /* border: 1px solid blue; */
+   min-height: 100px !important;    /* This controls the height of the editor */
+}
+
+.DraftEditor-editorContainer {
+  /* border: 1px solid green; */
+}
+
+.public-DraftStyleDefault-block {
+  /* border: 1px solid red; */
+  /* margin: 5px 0; */
+}
+
+.draft-editor {
+    .rdw-editor-main {
+        a { color: $secondary-color;}
+        position: relative;
+        z-index: 99;
+    }
+}
+
+.rdw-link-modal {
+    height: auto !important;
+    left: 5px;
+}
+
+.public-DraftEditor-content {
+    padding-left: $gutter-space;
+    padding-right: $gutter-space;
+}
+
+
+.rdw-link-modal-target-option{
+    display: flex;
+    align-items: center;
+    input[type="checkbox"]{
+        align-self: center;
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: $screen-phone) {
+    .rdw-link-modal {
+        left: 0px;
+
+        &-btn {
+            width: 80px;
+        }
+
+        &-target-option{
+            input[type="checkbox"]{
+                -webkit-appearance: checkbox;
+            }
+        }
+    }
+    .rdw-link-modal-input {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: $screen-phone){
+  .manage-faq > :nth-child(3) {
+    left: -100px;
+  }
+}
+
+
+
+
+

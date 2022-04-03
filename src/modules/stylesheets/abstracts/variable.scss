@@ -1,0 +1,87 @@
+//Screen breakpoint
+$xs: "0";
+$sm: "576px";
+$md: "768px";
+$lg: "992px";
+$xl: "1200px";
+
+
+$screen-phone:              $sm !default;
+$screen-tablet:             $md !default;
+$screen-desktop:            $lg !default;
+$screen-lg-desktop:         $xl !default;
+$screen-phone-mini:         320px !default;
+
+//Color palette
+$primary-color:             #144D43 !default;
+$primary-color-light:       #437169 !default;
+$primary-color-lighter:     #72948E !default;
+$secondary-color:           #F58800 !default;
+$secondary-color-light:     #F7A033 !default;
+$secondary-color-lighter:   #F9B866 !default;
+
+$disabaled-bg:              #F9F9F9 !default;
+//On demand color
+$light-bg-color:            #F4F4F5 !default;
+$white-color:               #FFFFFF !default;
+
+// Gray base color for use across theme.
+$gray-base:                 #000 !default;
+$gray-333:                  lighten($gray-base, 20%) !default; // #333
+$gray-555:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-666:                  lighten($gray-base, 40%) !default; // #666
+$gray-777:                  lighten($gray-base, 46.7%) !default; // #777
+$gray-999:                  lighten($gray-base, 60%) !default; // #999
+$gray-ccc:                  lighten($gray-base, 80%) !default; // #ccc
+$gray-eee:                  lighten($gray-base, 93.5%) !default; // #eee
+$gray-f5f5f5:               lighten($gray-base, 96%) !default; // #f5f5f5
+$gray-ddd:                  #dddddd !default; // #ddd
+$gray-FAFAFA:               #FAFAFA !default;
+$gray-F2F2F2:               #F2F2F2 !default;
+$gray-5F5F5F:               #5F5F5F !default;
+$gray-F8F8F8:               #F8F8F8 !default;
+$gray-939393:               #939393 !default;
+$addon-bg:                  #185298 !default;
+$red-color:                 #EA3F3F !default;
+
+$gray-202020:               #202020 !default;
+$gray-222020:               #222020 !default;
+$color-636A70:              #636A70 !default;
+$color-ced4da:              #ced4da !default;
+$color-80bdff:              #80bdff !default;
+$color-585F65:              #585F65 !default;
+
+$white-E8E8E8:              #E8E8E8 !default;
+$white-e9ecef:              #e9ecef !default;
+$white-E9E8EC:              #E9E8EC !default;
+$white-ECECEC:              #ECECEC !default;
+$white-C1C1C1:              #C1C1C1 !default;
+$white-E9EBEC:              #E9EBEC !default;
+$white-F1F1F1:              #F1F1F1 !default;
+$white-FDEFE0:              #FDEFE0 !default;
+$white-C5C5C5:              #C5C5C5 !default;
+$white-d9d9d9:              #d9d9d9 !default;
+$white-F6F8FA:              #F6F8FA !default;
+$white-DFDEDE:              #DFDEDE !default;
+$white-EEF2F2:              #EEF2F2 !default;
+
+$gray-144d4312:             #144d4312 !default;
+$gray-212529:               #212529 !default;
+$gray-2D3032:               #2D3032 !default;
+
+$color-6E918B:              #6E918B !default;
+$color-adb5bd:              #adb5bd !default;
+$color-495057:              #495057 !default;
+$color-353D45:              #353D45 !default;
+
+$font-large:       	        18px !default;
+$font-regular:              16px !default;
+$font-small:       	        14px !default;
+$gutter-space:              12px !default;
+
+//Helping variables
+$border-radius: 16px;
+
+
+
+

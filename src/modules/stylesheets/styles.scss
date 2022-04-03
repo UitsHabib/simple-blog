@@ -1,0 +1,63 @@
+@charset 'utf-8';
+//bootstrap-required
+@import "bootstrap/scss/functions"; // Required
+
+//bootstrap-variable
+@import "abstracts/bootstrap-variables.scss";
+
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+
+//bootstrap-components
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/bootstrap-utilities";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/accordion";
+//Vendor
+@import "vendor/cdp-font-icon";
+
+//Abstracts
+@import "abstracts/font";
+@import "abstracts/mixin";
+@import "abstracts/variable";
+
+//Base Styles
+@import "base/reset";
+@import "base/typoghraphy";
+@import "base/custom-scroll";
+
+//Components
+@import "components/accordion";
+@import "components/cdp-list-group";
+@import "components/profile-detail";
+@import "components/add-user";
+@import "components/category-of-service";
+@import "components/breadcrumb";
+@import "components/forbidden";
+@import "components/loader";
+@import "components/cdp-table";
+@import "components/dropdown";
+@import "components/modal-customize";
+@import "components/field-style";
+@import "components/pagination";
+@import "components/popup-customize";
+@import "components/my-profile";
+@import "components/draft-editor";
+@import "components/okla-search";
+@import "components/cdp-tab";
+@import "components/filter";
+@import "components/cdp-inbox";
+@import "components/custom-scroll";
+@import "components/hot-statistics.scss";
+@import "components/rating.scss";
+@import "components/search-autosuggestion.scss";
+
+
+//Layout
+@import "layouts/layout";
+@import "layouts/login";
+@import "layouts/dashboard";
+@import "layouts/header";
+@import "layouts/footer";

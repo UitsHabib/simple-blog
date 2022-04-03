@@ -1,0 +1,21 @@
+@media (min-width: $screen-tablet) {
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #B3AFB3;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #A39EA3;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #F0F0F0;
+        border-radius: 0px;
+        box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+    }
+}

@@ -1,0 +1,257 @@
+.cdp-tab {
+
+    &__details {
+        min-height: 350px;
+        display: flex;
+
+        &.fluid {
+            display: block;
+
+            .cdp-tab__tabs {
+                width: 100%;
+                display: flex !important;
+                flex-direction: row;
+                background: $gray-F2F2F2;
+            }
+
+            .nav-link {
+                margin-bottom: 0px;
+                border-left: 0px;
+                border-bottom: 9px solid $gray-F2F2F2;
+
+                &:hover {
+                    border-bottom: 9px solid $white-e9ecef;
+                }
+
+                &.active {
+                    border-left: 0px;
+                    border-bottom: 9px solid $secondary-color;
+                }
+            }
+
+            .tabs-no-hover {
+                pointer-events: none;
+            }
+        }
+
+        .tab-content {
+            flex: 0 0 calc(100% - 270px);
+        }
+
+        &-items {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            padding: 0px 10px 20px 0px;
+            flex: 0 0 50%;
+            /*white-space: nowrap;*/
+
+            &.fluid {
+                flex: 0 0 100%;
+            }
+        }
+
+        &-title {
+            display: block;
+            color: $gray-202020;
+            font-size: $font-large;
+            font-weight: 600;
+        }
+
+        &-value {
+            color: $color-636A70;
+            font-size: $font-large;
+        }
+    }
+
+    &__tabs {
+        margin-right: 30px;
+        flex-direction: column;
+        width: 270px;
+
+        @media (min-width: $screen-tablet) {
+            border-bottom: 0px;
+        }
+
+        &.add-campaign-steps {
+            .nav-link {
+                position: relative;
+
+                &.active {
+                    background: $gray-F2F2F2;
+                }
+
+                &:before {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    border: none;
+                    background: transparent;
+                    font-size: $font-small;
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+
+                &.active,
+                &.completed_tab.active {
+                    &:before {
+                        content: "";
+                        color: $secondary-color;
+                    }
+                }
+
+                &.completed_tab {
+                    &:before {
+                        content: "";
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            background: $gray-F2F2F2;
+            margin-bottom: 5px;
+            border: none;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: $gray-222020;
+            border-left: 9px solid $gray-F2F2F2;
+            border-radius: 0px;
+            width: 100%;
+
+            &.active {
+                border-left: 9px solid $secondary-color;
+                background: $white-color;
+            }
+
+            &.completed_tab {
+                border-left: 9px solid $primary-color;
+
+                &.active {
+                    border-left: 9px solid $secondary-color;
+                }
+            }
+        }
+
+
+    }
+
+    &__btn {
+        &-search:not(:disabled) {
+            & + i {
+                display: none !important;
+            }
+        }
+    }
+
+    &__workplace-icons {
+        width: 50px;
+        display: inline-block;
+
+        i + i {
+            padding-left: 6px;
+        }
+    }
+
+    @media (max-width: $screen-tablet) {
+
+        &__details {
+            display: block;
+
+            &-title,
+            &-value {
+                font-size: $font-regular;
+            }
+
+            &-dropdown {
+                white-space: normal !important;
+                text-align: left;
+            }
+
+            &-workplace-dropdown-item {
+                white-space: normal;
+                border-bottom: 1px solid $gray-F2F2F2;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__tabs {
+            flex-direction: row;
+            margin-right: 0px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-bottom: none;
+            flex-wrap: nowrap;
+            overflow-y: auto;
+
+            &.add-campaign-steps .nav-link:before {
+                font-size: 10px;
+                top: 2px;
+                right: 2px;
+            }
+
+            .nav-link {
+                margin-bottom: 0px;
+                border-left: 0px;
+                border-bottom: 5px solid $gray-F2F2F2;
+                padding: 10px $gutter-space;
+                font-size: $font-regular;
+                flex: 0 0 auto;
+
+                @media (max-width: 392px) {
+                    padding: 10px 12px;
+                }
+
+                &.active {
+                    border-bottom: 5px solid $secondary-color;
+                    border-left: 0px;
+                }
+
+                &.completed_tab {
+                    border-bottom: 5px solid $primary-color;
+                    border-left: 0px;
+
+                    &.active {
+                        border-bottom: 5px solid $secondary-color;
+                        border-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// tabs-workaround
+@media (max-width: $screen-tablet){
+    .tabs__container{
+        .nav-item > button{
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+    }
+
+    .tabs-container__jobs{
+        .nav-item:first-child > button{
+            height: 100%;
+            white-space: nowrap;
+        }
+    }
+}

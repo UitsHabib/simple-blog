@@ -1,0 +1,355 @@
+.faq,
+.accordion-consent {
+
+    &__header {
+        color: $primary-color;
+    }
+
+    &__icon {
+
+        &-down {
+            color: $gray-base;
+            background: $gray-F2F2F2;
+            height: 21px;
+            width: 21px;
+            border-radius: 50%;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                top: 1px;
+                position: relative;
+            }
+        }
+
+        &-help {
+            font-size: 32px;
+        }
+
+        &-toggle {
+            font-size: 25px;
+        }
+    }
+
+    .card {
+        border-radius: 0px;
+        border: 0px;
+        /*border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;*/
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        &-header {
+            font-weight: 600;
+            color: $primary-color;
+            background: inherit;
+        }
+
+        &-body {
+            background: $gray-F8F8F8;
+            color: $gray-5F5F5F;
+            font-size: $font-small;
+            line-height: 1.8;
+        }
+        //Accordian up/down arrow styling in hacky way
+
+    }
+}
+
+.faq {
+
+    .faq-icon-minimize {
+        display: none;
+    }
+
+    &-expand {
+        position: absolute;
+        left: $gutter-space;
+        top: $font-small;
+        width: calc(100% - 24px);
+        height: calc(100% - 32px) !important;
+        z-index: 100;
+
+        .faq-icon-minimize {
+            display: inline-block;
+        }
+
+        .faq-icon-expand {
+            display: none !important;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        .card {
+            &:last-child {
+                border-bottom: none !important;
+            }
+
+            a {
+                color: $secondary-color;
+
+                &:hover {
+                    color: $secondary-color !important;
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+
+    &__question {
+        flex: 0 0 90%;
+    }
+
+    &__no-data-found-lg-icon {
+        font-size: 175px;
+        opacity: .1;
+    }
+
+    @media (min-width: $screen-desktop) {
+        /*&:after {
+            content: "";
+            display: block;
+            width: 131px;
+            height: 215px;
+            background: url(../../../../wwwroot/assets/images/question.svg) no-repeat;
+            right: 50px;
+            position: absolute;
+            bottom: 50px;
+            z-index: 1;
+        }*/
+    }
+
+    &__tabs {
+        border-bottom: 1px solid $primary-color;
+
+        .nav-link {
+            &:hover {
+                border-color: transparent;
+            }
+
+            &.active {
+                background: $primary-color;
+                color: $white-color;
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    }
+
+    &__in-modal {
+        .faq__header {
+            display: none !important;
+        }
+    }
+
+    &__list-group {
+
+        &--modal-open {
+            visibility: hidden;
+        }
+
+        @media (max-width: $screen-tablet) {
+            &--modal-open {
+                visibility: visible;
+            }
+        }
+
+        .list-group-item:hover {
+            @extend .cdp-light-bg;
+            cursor: pointer;
+
+            .faq__list-group--modal-open {
+                visibility: visible;
+            }
+        }
+
+        &-icon {
+            width: 50px;
+            flex: 0 0 50px;
+        }
+    }
+}
+
+.help-center {
+    &__card {
+
+        &.faq {
+            &:after {
+               display: none;
+            }
+        }
+    }
+}
+
+.accordion-consent {
+    &__header {
+        color: inherit;
+        font-size: $font-large;
+        background: $gray-FAFAFA;
+    }
+
+    &__body {
+        a {
+            color: $secondary-color;
+        }
+    }
+
+    .accordion {
+        .card {
+            border-bottom: 0px !important;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                height: 1px;
+                background: $white-E8E8E8;
+                width: calc(100% - 42px);
+                right: 0px;
+            }
+
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &-body {
+                margin-left: 42px;
+                padding: $gutter-space;
+
+                @media (max-width: $screen-phone) {
+                    margin-left: 0px;
+                }
+
+                p {
+                    margin-bottom: 0px;
+
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .consent-check {
+        position: relative;
+        top: 2px;
+    }
+
+    .consent-summary {
+        color: $gray-202020;
+        font-size: $font-small;
+        a{
+            color: $secondary-color !important;
+        }
+    }
+}
+
+//react-bs-2
+.accordion-consent{
+    .accordion-item{
+        position:relative;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            background: #e8e8e8;
+            width: calc(100% - 42px);
+            right: 0;
+        }
+
+        &:last-child:after{
+            display: none;
+        }
+
+        a{
+            color: $secondary-color !important;
+        }
+    }
+    // .accordion-body:after{
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     bottom: 0;
+    //     height: 1px;
+    //     background: #e8e8e8;
+    //     width: calc(100% - 42px);
+    //     right: 0;
+    // }
+    .accordion-button{
+        padding-top: 9px ;
+        padding-bottom: 9px;
+        z-index: 0;
+        &:hover{
+          z-index: 0;
+        //   &:not(.collapsed){
+        //     z-index: 0;
+        //     }
+        }
+    }
+}
+
+.faq , .accordion-consent{
+    .accordion-item {
+        border-radius: 0 !important;
+        border: 0;
+        &:focus{
+            box-shadow: none;
+        }
+
+    }
+    .accordion-button {
+        color: $primary-color;
+        font-weight: 600;
+        &:not(.collapsed){
+            background-color: transparent;
+            font-weight: 600;
+        }
+        &:focus{
+            box-shadow: none;
+        }
+        &:after{
+            border-radius: 100%;
+            background-color: #F2F2F2;
+            background-position: center;
+            background-size: 11px;
+            width: 21px;
+            height: 21px;
+            margin-left: auto;
+        }
+    }
+}
+
+//cdp-table__responsive-accordion
+.cdp-table__responsive-accordion{
+    .accordion-header{
+        padding: 0 !important;
+    }
+
+    .accordion-button{
+        padding: 11.5px 16px;
+        font-size: 14px;
+        background: none;
+        &:focus{
+            box-shadow: none;
+        }
+        &::after{
+            display: none;
+        }
+    }
+
+    .accordion-item{
+        .accordion-collapse.collapsing{
+            transition: 1s all;
+        }
+    }
+}

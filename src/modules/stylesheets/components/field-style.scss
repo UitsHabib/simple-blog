@@ -1,0 +1,252 @@
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    min-width: 47px;
+    width: 47px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white-ECECEC;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: $white-C1C1C1;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: $primary-color;
+}
+input[disabled]:checked + .slider {
+    background: $primary-color-lighter;
+}
+
+input[disabled]:checked + .slider {
+    background: $primary-color-lighter;
+}
+
+input[disabled] + .slider {
+    background: $light-bg-color;
+    cursor: default;
+
+    &:before {
+        background: $white-E9EBEC;
+    }
+}
+
+input:focus + .slider {
+
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+    background-color: $white-color;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-label {
+    font-weight: 600;
+}
+
+
+
+
+
+
+/*Checkbox*/
+.form-check-input:checked {
+    border-color: $primary-color !important;
+    background-color: $primary-color !important;
+}
+.form-check-input:focus {
+    border-color: $primary-color !important;
+    box-shadow: none;
+}
+
+.form-check-input:checked ~ .form-check-input::before {
+    border-color: $primary-color !important;
+    background-color: $primary-color !important;
+}
+
+.form-check-input[disabled]:checked ~ .form-check-input::before {
+    border-color: $primary-color-lighter !important;
+    background-color: $primary-color-lighter !important;
+}
+
+.form-check-input[disabled]:checked ~ .form-check-input {
+    color: $gray-333;
+}
+
+.custom-checkbox .form-check-input:focus ~ .form-check-input::before {
+    box-shadow: none !important;
+}
+.form-check-input:focus ~ .form-check-input::before {
+    box-shadow: 0 0 0 0.2rem rgba(20, 77, 67, .25) !important;
+}
+
+.form-check-input::before {
+    border: $color-adb5bd solid 1px !important;
+
+}
+.form-check-input:active ~ .form-check-input::before {
+    background-color: rgba(20, 77, 67, .25) !important;
+}
+
+textarea.form-control {
+    height: auto;
+    min-height: 150px;
+}
+
+
+.phone-list {
+
+    .dropdown {
+        &-toggle {
+            background: $white-ECECEC;
+            position: absolute;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            /*border-right: 1px solid $color-ced4da;*/
+            width: 90px;
+            /*max-width: 100px;*/
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::after {
+                /*position: absolute;
+                top: 11px;
+                left: 28px;*/
+                font-size: 10px;
+                top: 2px;
+            }
+        }
+
+        &-menu {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        &-item {
+            .country-name,
+            .country-phone-code {
+                font-size: $font-small;
+            }
+
+            &:active {
+                .country-phone-code {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    .country-phone-code {
+        color: $color-636A70;
+    }
+
+    .form-control {
+        padding-left: 15px;
+    }
+
+    .phone-input {
+        .input-group-text {
+            width: 92px;
+            position: relative;
+        }
+
+        .dropdown {
+            position: initial;
+        }
+    }
+}
+
+
+
+.multiselect {
+
+    &__menu {
+        z-index: 9999 !important;
+
+        @media (max-width: $screen-tablet) {
+            z-index: 99 !important;
+        }
+    }
+
+    &__control {
+
+        &--is-focused {
+            border-color: $color-80bdff !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+        }
+    }
+
+    &__option {
+
+        &--is-selected {
+            background: $primary-color-lighter !important;
+            margin-top: 3px !important;
+        }
+    }
+
+    &__quick-filter {
+        width: 250px;
+
+        @media (max-width: $screen-tablet) {
+            width: 230px;
+        }
+
+        .multiselect__control {
+            border-color: $primary-color !important;
+        }
+    }
+}
+
+.selected {
+    background: $gray-144d4312;
+}
+.w-65{
+    width:70px
+}
+

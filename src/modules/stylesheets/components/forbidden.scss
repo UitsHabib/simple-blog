@@ -1,0 +1,82 @@
+.forbidden {
+    background: $light-bg-color;
+
+    .row {
+        flex: 1 0 100%;
+    }
+
+    &__panel {
+        border-radius: $font-regular;
+        position: relative;
+    }
+
+    &__app-logo {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+
+    &__header {
+    }
+
+    &__subheader {
+        color: $secondary-color;
+        font-size: 60px;
+    }
+
+    &__text {
+        color: $color-585F65;
+        font-size: $font-large;
+    }
+
+    @media (max-width: $screen-lg-desktop) {
+        &__page-not-found {
+            height: 250px !important;
+        }
+    }
+
+    @media (max-width: $screen-desktop) {
+        &__page-not-found {
+            height: 200px !important;
+        }
+    }
+
+
+    @media (max-width: $screen-tablet) {
+        &__page-not-found {
+            height: 150px !important;
+        }
+    }
+
+    @media (max-width: $screen-phone) {
+        &__app-logo {
+            position: absolute;
+            left: $font-small;
+            top: $font-large;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        &__header {
+            padding-top: 90px !important;
+        }
+
+        &__subheader {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+
+        &__text {
+        }
+
+        &__image {
+            height: 130px !important;
+        }
+
+        &__page-not-found {
+            height: 100px !important;
+        }
+    }
+}
