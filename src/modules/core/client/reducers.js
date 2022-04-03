@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
- 
-let countryReducer;
+import { userReducer } from '../../user';
 
 export default combineReducers({
-    countryReducer,
+    userReducer,
 })
