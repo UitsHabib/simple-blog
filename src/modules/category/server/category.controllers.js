@@ -1,5 +1,7 @@
 const path = require('path');
 const Category = require(path.join(process.cwd(), "src/modules/category/server/category.model"));
+const Post = require(path.join(process.cwd(), "src/modules/post/server/post.model"));
+const User = require(path.join(process.cwd(), "src/modules/user/server/user.model"));
 const { Op } = require('sequelize');
 
 async function getCategories(req, res) {
@@ -33,7 +35,29 @@ async function getCategories(req, res) {
             order.splice(0, 0, [orderBy, orderType]);
         }
 
-        const categories = await Category.findAll({ offset, limit, order });
+        const { isAvailablePosts } = req.query;
+
+        const PostModel = isAvailablePosts ? ([
+            {
+                model: Post,
+                as: 'posts',
+                attributes: { exclude: ['created_at', 'updated_at'] },
+                include: [
+                    {
+                        model: User,
+                        as: 'user',
+                        attributes: ['first_name', 'last_name'],
+                    }
+                ]
+            }
+        ]) : null;
+
+        const categories = await Category.findAll({
+            offset, 
+            limit, 
+            order,
+            include: PostModel
+        });
 
         const total = await Category.count();
 

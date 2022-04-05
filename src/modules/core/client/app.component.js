@@ -14,6 +14,8 @@ import store from './store';
 
 import { Login, Dashboard } from '../../user';
 
+import Home from './components/home';
+
 let refCount = 0;
 
 function setLoading(isLoading) {
@@ -28,7 +30,7 @@ function setLoading(isLoading) {
 }
 
 axios.interceptors.request.use(config => {
-    setLoading(true);
+    // setLoading(true);
     return config;
 }, error => {
     setLoading(false);
@@ -60,7 +62,7 @@ export default function App() {
             <Switch>
                 <PublicRoute path="/login" component={Login}/>
 
-                <PrivateRoute exact path="/" component={Dashboard}/>
+                <PublicRoute exact path="/" component={Home}/>
 
                 <Route component={NoMatch} />
             </Switch>

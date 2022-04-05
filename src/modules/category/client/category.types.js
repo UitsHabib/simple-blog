@@ -1,0 +1,4 @@
+export default {
+    GET_TOPICS: 'GET_TOPICS',
+    GET_TOPICS_FULFILLED: 'GET_TOPICS_FULFILLED'
+};
