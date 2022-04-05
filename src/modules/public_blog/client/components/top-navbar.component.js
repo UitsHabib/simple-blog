@@ -4,7 +4,7 @@ import "../../../../stylesheets/style.css";
 function TopNavbar({  }) {
     return (
         <div id="social_link">
-            <div class="social_icon" style={{ marginLeft: '1000px' }}>
+            <div class="social_icon" style={{ marginLeft: '85%' }}>
                 <i class="fab fa-facebook"></i>
             </div>
 

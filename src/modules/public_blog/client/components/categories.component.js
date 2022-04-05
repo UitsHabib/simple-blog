@@ -6,7 +6,7 @@ function Categories({ categories }) {
     return (
         <>
             { categories.map(category => (
-                <div className='category'>
+                <div key={category.id} className='category'>
                     <p className='topic' style={{ color: 'red' }}>{`${category.title}(${category.posts?.length || 0}):`}</p>
                     { category.posts?.map(post => <><NavLink className='topic' key={post.id} to={`/posts/${post.id}`}>{post.title}</NavLink><br></br></>) }
                 </div>

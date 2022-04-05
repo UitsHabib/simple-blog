@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import TopNavbar from './top-navbar.component';
-import { Navbar } from 'react-bootstrap';
+import Navbar from './navbar.component';
 import RightNavbar from './right-navbar.component';
 import Posts from './posts.component';
 import CoverPhoto from './cover-photo.component';
