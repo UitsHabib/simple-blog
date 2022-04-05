@@ -10,3 +10,13 @@ export function getPosts() {
         })
     };
 }
+
+export function getPost(id) {
+    return {
+        type: Types.GET_POST,
+        payload: axios({
+            method: 'get',
+            url: `/api/posts/${id}`
+        })
+    };
+}

@@ -13,7 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import store from './store';
 
 import { Login, Dashboard } from '../../user';
-import { Home } from '../../public_blog';
+import { Home, Post } from '../../public_blog';
 
 let refCount = 0;
 
@@ -60,6 +60,8 @@ export default function App() {
         <ToastProvider placement="top-center" autoDismissTimeout={2500} >
             <Switch>
                 <PublicRoute path="/login" component={Login}/>
+                
+                <PublicRoute exact path="/posts/:id" component={Post}/>
 
                 <PublicRoute exact path="/" component={Home}/>
 

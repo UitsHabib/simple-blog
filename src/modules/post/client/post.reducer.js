@@ -1,7 +1,8 @@
 import Types from './post.types';
 
 const initialState = {
-    postList: []
+    postList: [],
+    post: {}
 };
 
 export default function reducer(state = initialState, action) {
@@ -10,6 +11,12 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 postList: action.payload.data
+            };
+        }
+        case Types.GET_POST_FULFILLED: {
+            return {
+                ...state,
+                post: action.payload.data
             };
         }
     }
