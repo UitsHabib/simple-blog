@@ -1,15 +1,15 @@
-import Types from './category.types';
+import Types from './post.types';
 
 const initialState = {
-    categoriesWithPostList: []
+    postList: []
 };
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-        case Types.GET_CATEGORIES_WITH_POSTS_FULFILLED: {
+        case Types.GET_POSTS_FULFILLED: {
             return {
                 ...state,
-                categoriesWithPostList: action.payload.data
+                postList: action.payload.data
             };
         }
     }

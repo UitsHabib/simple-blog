@@ -13,8 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import store from './store';
 
 import { Login, Dashboard } from '../../user';
-
-import Home from './components/home';
+import { Home } from '../../public_blog';
 
 let refCount = 0;
 

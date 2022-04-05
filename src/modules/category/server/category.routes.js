@@ -6,11 +6,11 @@ const validate = require(path.join(process.cwd(), "src/modules/core/server/middl
 
 module.exports = (app) => {
     app.route('/api/categories')
-        .get(AuthStrategy, controller.getCategories)
+        .get(controller.getCategories)
         .post(AuthStrategy, validate(categorySchema), controller.createCategory);
 
     app.route('/api/categories/:id')
-        .get(AuthStrategy, controller.getCategory)
+        .get(controller.getCategory)
         .put(AuthStrategy, validate(categorySchema), controller.updateCategory)
         .delete(AuthStrategy, controller.deleteCategory);
 }

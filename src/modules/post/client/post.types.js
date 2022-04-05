@@ -1,0 +1,4 @@
+export default {
+    GET_POSTS: 'GET_POSTS',
+    GET_POSTS_FULFILLED: 'GET_POSTS_FULFILLED',
+};

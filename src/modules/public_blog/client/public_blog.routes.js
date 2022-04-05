@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, useRouteMatch } from "react-router-dom";
+import Home from './components/home.component';
 import PrivateRoute from "../../core/client/PrivateRoute";
 
 export default function UserRoutes() {
@@ -7,9 +8,7 @@ export default function UserRoutes() {
 
     return (
         <Switch>
-            {/* <PrivateRoute exact path={path} component={UserManagement}/>
-            <PrivateRoute path={`${path}/users/:id`} component={UserDetails}/>
-            <PrivateRoute path={`${path}/users`} component={Users}/> */}
+            <PrivateRoute exact path={path} component={Home}/>
         </Switch>
     );
 }
